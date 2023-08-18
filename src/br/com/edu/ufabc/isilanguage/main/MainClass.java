@@ -1,9 +1,5 @@
 package br.edu.ufabc.isilanguage.main;
 
-import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.CommonTokenStream;
-
-import br.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
 import br.edu.ufabc.isilanguage.parser.langLexer;
 import br.edu.ufabc.isilanguage.parser.langParser;
 
@@ -33,6 +29,4 @@ public class MainClass {
             System.err.println("ERROR - " + ex.getMessage());
         }
     }
-
-    
 }

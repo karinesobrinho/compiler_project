@@ -35,8 +35,8 @@ public class langParser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'programa'", "'fimprog;'", "'numero'", "'texto'" , "'leia'", "'escreva'", "'enquanto'", "'se'"
-		"'senao'","'('", "')'", "';'", null, "'='"
+		null, "'programa'", "'fimprog;'", "'numero'", "'texto'" , "'leia'", "'escreva'", "'enquanto'", "'se'",
+		"'('", "')'", "';'", null, "'='"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, "AP", "FP", "SC", "OP", "ATTR", "VIR", "ACH", "FCH", "OPREL",
@@ -94,7 +94,7 @@ public class langParser extends Parser {
 		private IdiSymbol symbol;
 		private IsiProgram program = new IsiProgram();
 		private ArrayList<AbstractCommand> curThread;
-		private Stack<ArrayList<AbstractCommand>> stack = new stack = new Stack<ArrayList<AbstractCommand>>();
+		private Stack<ArrayList<AbstractCommand>> stack = stack = new Stack<ArrayList<AbstractCommand>>();
 		private String _readID;
 		private String _writeID;
 		private String _exprID;
@@ -356,6 +356,7 @@ public class langParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 			}
+		}
 		catch (RecognitionException re) {
 			_localctx.exception = re;
 			_errHandler.reportError(this, re);
