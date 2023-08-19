@@ -22,7 +22,7 @@
 		<td>Samira Haddad</td>
 	</tr>
     <tr>
-		<td>Vinicius Viana</td>
+        <td>Vinicius Viana</td>
 	</tr>
 	</tbody>
 </table>
