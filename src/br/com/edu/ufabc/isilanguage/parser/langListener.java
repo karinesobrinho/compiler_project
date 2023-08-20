@@ -2,20 +2,6 @@
 package br.com.edu.ufabc.isilanguage.parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
-import br.com.edu.ufabc.isilanguage.datastructure.IsiSymbol;
-import br.com.edu.ufabc.isilanguage.datastructure.IsiVariable;
-import br.com.edu.ufabc.isilanguage.datastructure.IsiSymbolTable;
-import br.com.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
-import br.com.edu.ufabc.isilanguage.ast.IsiProgram;
-import br.com.edu.ufabc.isilanguage.ast.AbstractCommand;
-import br.com.edu.ufabc.isilanguage.ast.CommandLeitura;
-import br.com.edu.ufabc.isilanguage.ast.CommandEscrita;
-import br.com.edu.ufabc.isilanguage.ast.CommandAtribuicao;
-import br.com.edu.ufabc.isilanguage.ast.CommandDecisao;
-import br.com.edu.ufabc.isilanguage.ast.CommandRepeticao;
-import java.util.ArrayList;
-import java.util.Stack;
-
 /**
  * This interface defines a complete listener for a parse tree produced by
  * {@link langParser}.

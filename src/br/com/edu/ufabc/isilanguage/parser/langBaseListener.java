@@ -1,7 +1,6 @@
 // Generated from lang.g4 by ANTLR 4.7.1
 package br.com.edu.ufabc.isilanguage.parser;
 
-import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
