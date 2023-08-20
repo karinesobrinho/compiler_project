@@ -895,6 +895,7 @@ public class langParser extends Parser {
 				match(ACH);
 				curThread = new ArrayList<AbstractCommand>();
 				stack.push(curThread);
+				{
 				setState(134);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -909,6 +910,7 @@ public class langParser extends Parser {
 					_errHandler.sync(this);
 					_la = _input.LA(1);	
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) | (1L<< T__7) | (1L << ID))) != 0) );
+				}
 				setState(138);
 				match(FCH);
 				listaFalse = stack.pop();
@@ -916,6 +918,7 @@ public class langParser extends Parser {
 				stack.peek().add(cmd);
 				}
 			}
+		}
 		}
 		catch (RecognitionException re){
 			_localctx.exception = re;
@@ -994,7 +997,7 @@ public class langParser extends Parser {
 	public static class TermoContext extends ParserRuleContext {
 		public TerminalNode ID() { return getToken(langParser.ID, 0); }
 		public TerminalNode NUMBER() { return getToken(langParser.NUMBER, 0); }
-		public TerminalNode TEXT() { return getToken(langParser.TEXT, 0); }
+		public TerminalNode TEXT() { return getToken(langParser.TEXTO, 0); }
 		public TermoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1016,7 +1019,7 @@ public class langParser extends Parser {
 		try {
 				setState(156);
 				_errHandler.sync(this);
-				case ID:
+				switch (_input.LA(1)) { case ID:
 					enterOuterAlt(_localctx, 1);
 					{
 					setState(152);
@@ -1043,6 +1046,7 @@ public class langParser extends Parser {
 					break;
 				default:
 					throw new NoViableAltException(this);
+				}
 		}
 		catch (RecognitionException re) {
 			_localctx.exception = re;
