@@ -15,7 +15,7 @@ public class CommandDecisao extends AbstractCommand {
 	}
 	@Override
 	public String generateJavaCode() {
-		// TODO Auto-generated method stub
+
 		StringBuilder str = new StringBuilder();
 		str.append("if ("+condition+") {\n");
 		for (AbstractCommand cmd: listaTrue) {

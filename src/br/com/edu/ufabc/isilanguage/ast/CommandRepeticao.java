@@ -14,7 +14,7 @@ public class CommandRepeticao extends AbstractCommand {
 	}
 	@Override
 	public String generateJavaCode() {
-		// TODO Auto-generated method stub
+
 		StringBuilder str = new StringBuilder();
 		str.append("while ("+repetition+") {\n");
 		for (AbstractCommand cmd: listaTrue) {
