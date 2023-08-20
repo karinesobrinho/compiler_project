@@ -1,0 +1,11 @@
+programa
+
+  numero a.
+  texto b.
+  
+
+  
+  a := "teste".
+  
+  
+fimprog.

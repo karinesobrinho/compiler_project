@@ -1,0 +1,34 @@
+programa
+
+  numero a,b,c,d,e;
+  texto g,f;
+  
+
+  leia(a);
+  escreva(a);
+  leia(b);
+  escreva(b);
+   
+  e = 2.5;
+  f = "Paulo Cesar Tamara Rodolfo";
+  
+  se(a<b)
+  {
+     c=a+b;
+   }senao
+   {
+   c=a-b;
+   }
+   
+   d = a + b;
+   escreva(d);
+   
+   
+ enquanto(a > b)
+{
+	escreva (a);
+	a = a - 1;
+}
+  
+   
+fimprog;

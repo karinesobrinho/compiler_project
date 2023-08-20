@@ -1,0 +1,11 @@
+programa
+
+  numero a.
+  
+  a := 2.06.
+  
+  escreva (a).
+  escreva (b).
+  
+  
+fimprog.

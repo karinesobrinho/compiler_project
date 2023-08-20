@@ -1,0 +1,10 @@
+programa
+
+  texto a.
+  
+  a := "TESTESTRING".
+  
+  escreva (a).
+  
+  
+fimprog.

@@ -1,0 +1,8 @@
+programa
+
+  numero a.
+
+  a := 54  * 10/100.
+  
+  
+fimprog.

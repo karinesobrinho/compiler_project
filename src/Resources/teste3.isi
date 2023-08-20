@@ -1,0 +1,16 @@
+programa
+
+  numero a, b.
+
+
+  a := 5.
+  b := 1.
+  
+  enquanto(a > b)
+{
+	escreva (a).
+	a := a - 1.
+}
+  
+  
+fimprog.

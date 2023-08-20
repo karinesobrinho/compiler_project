@@ -1,0 +1,10 @@
+programa
+
+  texto a.
+  
+  a := "Paulo Tamara Cesar Rodolfo".
+  
+  escreva (a).
+  
+  
+fimprog.
