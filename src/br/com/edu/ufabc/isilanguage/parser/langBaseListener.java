@@ -5,6 +5,7 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
+import org.antlr.v4.runtime.ParserRuleContext;
 
 import br.com.edu.ufabc.isilanguage.parser.langParser.CmdenquantoContext;
 import br.com.edu.ufabc.isilanguage.parser.langParser.CmdselecaoContext;
