@@ -7,8 +7,6 @@ import br.com.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
 import br.com.edu.ufabc.isilanguage.parser.langLexer;
 import br.com.edu.ufabc.isilanguage.parser.langParser;
 
-
-import org.antlr.v4.runtime.*;
 public class MainClass {
     public static void main(String[] args){
         try{
@@ -20,16 +18,16 @@ public class MainClass {
 
             parser = new langParser(tokenStream);
             parser.prog();
-            System.out.println("Compilation Successful!");
+            System.out.println("Compilação bem sucedida");
 
             parser.exibeComandos();
             parser.generateCode();
             /*parser.Warnings();*/
 
         } catch (IsiSemanticException ex) {
-            System.err.println("Semantic error - " + ex.getMessage());
+            System.err.println("Erro semântico- " + ex.getMessage());
         } catch (Exception ex) {
-            System.err.println("ERROR - " + ex.getMessage());
+            System.err.println("Erro - " + ex.getMessage());
         }
     }
 }
