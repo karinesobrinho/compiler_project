@@ -20,6 +20,10 @@ public class CommandAtribuicao extends AbstractCommand{
 		return id + " = "+expr+";";
 	}
 	@Override
+	public String generatePythonCode() {
+		return id + " = "+expr + "\n";
+	}
+	@Override
 	public String toString() {
 		return "CommandAtribuicao [id=" + id + ", expr=" + expr + "]";
 	}

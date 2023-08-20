@@ -25,6 +25,18 @@ public class CommandRepeticao extends AbstractCommand {
 		return str.toString();
 	}
 	@Override
+	public String generatePythonCode() {
+
+		StringBuilder str = new StringBuilder();
+		str.append("while ("+repetition+") :\n");
+		for (AbstractCommand cmd: listaTrue) {
+			str.append("\t"+cmd.generateJavaCode());
+		}
+		str.append("\n");
+	
+		return str.toString();
+	}
+	@Override
 	public String toString() {
 		return "CommandRepeticao [repetition=" + repetition + ", listaTrue=" + listaTrue + "]";
 	}
