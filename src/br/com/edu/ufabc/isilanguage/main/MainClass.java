@@ -1,7 +1,7 @@
-package br.edu.ufabc.isilanguage.main;
+package br.com.edu.ufabc.isilanguage.main;
 
-import br.edu.ufabc.isilanguage.parser.langLexer;
-import br.edu.ufabc.isilanguage.parser.langParser;
+import br.com.edu.ufabc.isilanguage.parser.langLexer;
+import br.com.edu.ufabc.isilanguage.parser.langParser;
 
 
 public class MainClass {

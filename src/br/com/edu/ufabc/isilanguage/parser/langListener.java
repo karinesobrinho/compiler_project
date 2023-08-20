@@ -1,5 +1,5 @@
 // Generated from lang.g4 by ANTLR 4.7.1
-package br.com.language.parser;
+package br.com.edu.ufabc.isilanguage.parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**

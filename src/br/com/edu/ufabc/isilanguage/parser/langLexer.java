@@ -1,5 +1,5 @@
 // Generated from lang.g4 by ANTLR 4.7.1
-package br.edu.ufabc.isilanguage.parser;
+package br.com.edu.ufabc.isilanguage.parser;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;

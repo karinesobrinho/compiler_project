@@ -1,15 +1,17 @@
 // Generated from lang.g4 by ANTLR 4.7.1
-package br.edu.ufabc.isilanguage.parser;
+package br.com.edu.ufabc.isilanguage.parser;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 
-import br.edu.ufabc.isilanguage.datastructure.IsiVariable;
-import br.edu.ufabc.isilanguage.datastructure.IsiSymbol;
-import br.edu.ufabc.isilanguage.datastructure.IsiSymbolTable;
-import br.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
+import br.com.edu.ufabc.isilanguage.datastructure.IsiVariable;
+import br.com.edu.ufabc.isilanguage.ast.AbstractCommand;
+import br.com.edu.ufabc.isilanguage.ast.IsiProgram;
+import br.com.edu.ufabc.isilanguage.datastructure.IsiSymbol;
+import br.com.edu.ufabc.isilanguage.datastructure.IsiSymbolTable;
+import br.com.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
 
 import java.util.Stack;
 import java.util.List;
@@ -91,7 +93,7 @@ public class langParser extends Parser {
 		private String _varName;
 		private String _varValue;
 		private IsiSymbolTable symbolTable = new IsiSymbolTable();
-		private IdiSymbol symbol;
+		private IsiSymbol symbol;
 		private IsiProgram program = new IsiProgram();
 		private ArrayList<AbstractCommand> curThread;
 		private Stack<ArrayList<AbstractCommand>> stack = stack = new Stack<ArrayList<AbstractCommand>>();

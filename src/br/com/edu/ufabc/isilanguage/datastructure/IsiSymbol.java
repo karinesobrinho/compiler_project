@@ -1,8 +1,9 @@
-package br.edu.ufabc.isilanguage.datastructure;
+package br.com.edu.ufabc.isilanguage.datastructure;
 
-public class IsiSymbol {
+public abstract class IsiSymbol {
     
     protected String name;
+    public abstract String generateJavaCode();
 
     public IsiSymbol(String name) {
         this.name = name;
@@ -15,6 +16,7 @@ public class IsiSymbol {
     public void setName(String nome) {
         this.name = nome;
     }
+    
 
     @Override
     public String toString() {
