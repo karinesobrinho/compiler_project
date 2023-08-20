@@ -121,7 +121,7 @@ public class langParser extends Parser {
 		
 		public void verificaID(String id){
 			if (!symbolTable.exists(id)){
-				throw new IsiSemanticException("Simbolo "+id+" não declarado");
+				throw new IsiSemanticException("Symbol "+id+" not declared");
 			}
 		}
 		
@@ -165,12 +165,12 @@ public class langParser extends Parser {
 
 	public void Warning()
 	{
-		StringBuilder warn = new StringBuilder();
+		StringBuilder warning = new StringBuilder();
 		StringBuilder var = exibeVariavelSemUso();
 		if(var==null)return;
-		warn.append("WARNINGS: \n");
-		warn.append(exibeVariavelSemUso());
-		System.out.println(warn);
+		warning.append("WARNINGS: \n");
+		warning.append(exibeVariavelSemUso());
+		System.out.println(warning);
 	}
 
 	public langParser(TokenStream input) {
@@ -330,7 +330,7 @@ public class langParser extends Parser {
 				                     symbolTable.add(symbol);	
 				                  }
 				                  else{
-				                  	 throw new IsiSemanticException("Simbolo "+_varName+" já foi declarado anteriormente");
+				                  	 throw new IsiSemanticException("Symbol "+_varName+" has already been declared");
 				                  }
 			                    
 			setState(45);
@@ -351,7 +351,7 @@ public class langParser extends Parser {
 					                     symbolTable.add(symbol);	
 					                  }
 					                  else{
-					                  	 throw new IsiSemanticException("Simbolo "+_varName+" já foi declarado anteriormente");
+					                  	 throw new IsiSemanticException("Symbol "+_varName+" has already been declared");
 					                  }
 				                    
 				}
@@ -726,7 +726,7 @@ public class langParser extends Parser {
 
 			                    if (_exprContent =="")
 			                    {
-			                       throw new IsiSemanticException("Variável "+_exprID+" não foi atribuída");
+			                       throw new IsiSemanticException("Varable "+_exprID+" has no value");
 			                    }
 			                    else{
 			                           CommandAtribuicao cmd = new CommandAtribuicao(_exprID, _exprContent);

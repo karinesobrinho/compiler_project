@@ -13,9 +13,69 @@ grammar Lang;
 	private int _tipo;
 	private String _varName;
 	private String _varValue;
+	private symbolTable symbolTable = new IsiSymbolTable();
+	private IsiSymbol symbol;
+	private IsiProgram program = new IsiProgram();
+	private ArrayList<AbstractCommand> curThread;
+	private String _readID;
+	private String _writeID;
+	private String _exprID;
+	private String _exprContent;
+	private String _expreDecision;
+	private String _expreRepetition;
+	privavte ArrayList<String> variavelSemUso;
+	private ArrayList<AbstractCommand> listTrue;
+	private ArrayList<AbstractCommand> listFalse; 
+
+}
+
+public void verificaID(String id){
+	if(!symbolTable.exists(id)){
+		throw new IsiSemanticException("Symbol " +id+ " not declared");
+	}
+}
+
+public void exibeComandos(){
+	for(AbstractCommand c: program.getComandos()){
+		System.out.println(c);
+	}
+}
+
+public StringBuilder exibeVariavelSemUso(){
+	StringBuilder varWarning = program.getVarSemUso();
+	ArrayList<String> var = program.getVarSemUso();
+
+	if(var.isEmpty()) return null;
+
+	int size = var.size();
+	if(size == 1){
+		varWarning.append(var.get(0));
+	}
+	else{
+		for(int i = 0; i < size-2; i++){
+			String v = var.get(i);
+			varWarning.append(v);
+			varWarning.append(", ");
+		}
+		varWarning.append(var.get(size-1));
+		}
+	return varWarning;
+}
+
+public void Warning(){
+	StringBuilder warning = new StringBuilder();
+	StringBuilder var = exibeVariavelSemUso();
+	if(var != null) return;
+	warning.append(exibeVariavelSemUso());
+	System.out.println(warning);
+	
 }
 
 prog	: 'programa'  decl bloco  'fimprog;' 
+		  {
+			program.setVarTable(symbolTable);
+			program.setComandos(stack.pop());
+		  }
 		;
 
 decl	: (declaravar)+
@@ -57,6 +117,12 @@ bloco	: {curThread = new ArrayList<AbstractCommand>();
 
 tipo	: 'numero' { _tipo = IsiVariable.Number; }
 		| 'texto'  { _tipo = IsiVariable.TEXT; }
+		;
+
+bloco	: {curThread = new ArrayList<AbstractCommand>();
+				stack.push(curThread);
+		  } 
+		(cmd)+
 		;
 
 cmd		:  cmdleitura  
@@ -129,8 +195,28 @@ cmdenquanto	: 'enquanto'
 
 cmdselecao	:	'se'
 				AP
-				ID	{_ex}
-
+				ID	{_expreDecision = _input.LT(-1).getText(); }
+				OPREL {_expreDecision += _input.LT(-1).getText(); }
+				(ID | NUMBER) {_expreDecision += _input.LT(-1).getText(); }
+				FP
+				ACH {curThread = new ArrayList<AbstractCommand>();
+					 stack.push(curThread);
+					}
+					(cmd)+
+				FCH { listaTrue = stack.pop();
+					}
+				('senao' 
+					ACH {
+						curThread = new ArrayList<AbstractCommand>();
+					 	stack.push(curThread);
+					}
+					(cmd)+
+					FCH { listFalse = stack.pop();
+						  CommandDecisao cmd = new CommandDecisao(_expreDecision, listTrue, listFalse);
+						  stack.peek().add(cmd);
+						}
+				)?	
+			;
 
 expr		:  term ( 
 						OP {_exprContent += _input.LT(-1).getText();}
@@ -160,6 +246,18 @@ OP	: '+' | '-' | '*' | '/'
 
 ATTR : '='
 	 ;
+
+VIR : ','
+	;
+
+ACH	: '{'
+	;
+
+FCH	: '}'
+	;
+
+OPREL	: '==' | '!=' | '>=' | '<=' | '>' | '<'
+	    ;
 
 ID	: [a-z] ([a-z] | [A-Z] | [0-9])*
 	;

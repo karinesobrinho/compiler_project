@@ -13,7 +13,7 @@ public class MainClass {
 			langLexer lexer;
 			langParser parser;
 
-			lexer = new langLexer(CharStreams.fromFileName("src/Resources/teste2.isi"));
+			lexer = new langLexer(CharStreams.fromFileName("src/Resources/teste5.isi"));
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
 			
 			parser = new langParser(tokenStream);			
@@ -29,7 +29,7 @@ public class MainClass {
 		}
 		catch(Exception ex) {
 			ex.printStackTrace();
-			System.err.println("ERROR "+ex.getMessage());
+			System.err.println("Syntaxe error -"+ex.getMessage());
 		}
 		
 	}

@@ -4,15 +4,8 @@ def main(args):
 
 	b
 
-	c
-
-	a = 1
-	b = 2
-	if (a>b) :
+	a = 2.06
 	print(a)
-else :
-	print(b)
-
 
 if __name__ == '__main__':
 	main(sys.argv)

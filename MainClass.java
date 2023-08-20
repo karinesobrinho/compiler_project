@@ -4,11 +4,6 @@ public class MainClass{
        Scanner _key = new Scanner(System.in);
 double a;
 double b;
-double c;
-a = 1;
-b = 2;
-if (a>b) {
-System.out.println(a);}else {
-System.out.println(b);}
-
+a = 2.06;
+System.out.println(a);
   }}

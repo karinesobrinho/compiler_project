@@ -107,14 +107,14 @@ public class langLexer extends Lexer {
 		private String _exprID;
 		private String _exprContent;
 		private String _exprDecision;
-	        private String _exprRepetition;
-	        private ArrayList<String> VariaveisSemUso;
+	    private String _exprRepetition;
+	    private ArrayList<String> VariavelSemUso;
 		private ArrayList<AbstractCommand> listaTrue;
 		private ArrayList<AbstractCommand> listaFalse;
 		
 		public void verificaID(String id){
 			if (!symbolTable.exists(id)){
-				throw new IsiSemanticException("Simbolo "+id+" não declarado");
+				throw new IsiSemanticException("Symbol "+id+" not declared");
 			}
 		}
 		
@@ -124,17 +124,17 @@ public class langLexer extends Lexer {
 			}
 		}
 
-	        public StringBuilder exibeVariaveisSemUsoWNG()
+	        public StringBuilder exibeVariavelSemUso()
 	            {
-	                    StringBuilder varWNG = new StringBuilder();
+	                    StringBuilder varWarning = new StringBuilder();
 
-	                    varWNG.append("As seguintes variáveis foram declaradas e não foram utilizadas no programa: ");
+	                    varWarning.append("Variables declared but not used: ");
 	                    ArrayList<String> var = program.getVarSemUso();
 
 	                    if(var.isEmpty())return null;
 
 	                    int size = var.size();
-	                    if(size ==1)varWNG.append(var.get(0));
+	                    if(size ==1)varWarning.append(var.get(0));
 
 	                    else if(size>1)
 	                    {
@@ -142,22 +142,22 @@ public class langLexer extends Lexer {
 	                         for(;i<=size-2;i++)
 	                         {
 	                             String w = var.get(i);
-	                             varWNG.append(w);
-	                             varWNG.append(",");
+	                             varWarning.append(w);
+	                             varWarning.append(",");
 	                         }
-	                         varWNG.append(var.get(size-1));
+	                         varWarning.append(var.get(size-1));
 	                    }
 
-	                return varWNG;
+	                return varWarning;
 	            }
 
-	        public void Warnings()
+	        public void Warning()
 	            {
 	                StringBuilder warn = new StringBuilder();
-	                StringBuilder var = exibeVariaveisSemUsoWNG();
+	                StringBuilder var = exibeVariavelSemUso();
 	                if(var==null)return;
 	                warn.append("WARNINGS: \n");
-	                warn.append(exibeVariaveisSemUsoWNG());
+	                warn.append(exibeVariavelSemUso());
 	                System.out.println(warn);
 	            }
 		

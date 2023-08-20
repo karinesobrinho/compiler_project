@@ -2,7 +2,7 @@ programa
 
   numero a,b.
   
-  a := 2.06.
+  a = 2.06.
   
   escreva (a).
   
