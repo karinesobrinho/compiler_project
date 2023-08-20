@@ -108,6 +108,7 @@ public class langParser extends Parser {
 		private String _exprContent;
 		private String _exprDecision;
 		private String _exprRepetition;
+		private ArrayList<String> variavelSemUso;
 		private ArrayList<AbstractCommand> listaTrue;
 		private ArrayList<AbstractCommand> listaFalse;
 	
@@ -123,9 +124,46 @@ public class langParser extends Parser {
 		}
 	}
 
+	public StringBuilder exibeVariavelSemUso()
+	{
+			StringBuilder varWarning = new StringBuilder();
+
+			varWarning.append("Variables declared but not used: ");
+			ArrayList<String> var = program.getVarSemUso();
+
+			if(var.isEmpty())return null;
+
+			int size = var.size();
+			if(size ==1)varWarning.append(var.get(0));
+
+			else if(size>1)
+			{
+				 int i=0;
+				 for(;i<=size-2;i++)
+				 {
+					 String w = var.get(i);
+					 varWarning.append(w);
+					 varWarning.append(",");
+				 }
+				 varWarning.append(var.get(size-1));
+			}
+
+		return varWarning;
+	}
+
 	public void generateCode(){
 		program.generateTarget();
-		//program.generatePythonTarget();
+		program.generatePythonTarget();
+	}
+
+	public void Warning()
+	{
+		StringBuilder warn = new StringBuilder();
+		StringBuilder var = exibeVariavelSemUso();
+		if(var==null)return;
+		warn.append("WARNINGS: \n");
+		warn.append(exibeVariavelSemUso());
+		System.out.println(warn);
 	}
 
 	public void verificaTipo(String id, int tipo){
