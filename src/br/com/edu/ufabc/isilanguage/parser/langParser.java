@@ -880,7 +880,7 @@ public class langParser extends Parser {
 				setState(126);
 				_errHandler.sync(this);
 				_la = _input.LA(1);	
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) || (1L<< T__7) | (1L << ID))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) | (1L<< T__7) | (1L << ID))) != 0) );
 			setState(128);
 			match(FCH);
 			listaTrue = stack.pop();
@@ -908,7 +908,7 @@ public class langParser extends Parser {
 					setState(136);
 					_errHandler.sync(this);
 					_la = _input.LA(1);	
-				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) || (1L<< T__7) | (1L << ID))) != 0) );
+				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) | (1L<< T__7) | (1L << ID))) != 0) );
 				setState(138);
 				match(FCH);
 				listaFalse = stack.pop();
