@@ -28,13 +28,13 @@
 </table>
  
 ## Checklist
-- [] Possuir 2 tipos de variáveis  
-- [] Possuir a estrutura If.. else 
-- [] Possuir a estrutura de controle while/do while 
-- [] Operações Aritméticas executadas corretamente 
-- [] Atribuições realizadas corretamente
-- [] Possuir operações de Entrada e Saída
-- [] Aceitar números decimais
-- [] Verificar se a variável já foi previamente declarada
-- [] Verificar se a variável foi declarada e não foi usada
-- [] Verificar se uma variável está sendo usada sem ter valor inicial
+- [x] Possuir 2 tipos de variáveis  
+- [x] Possuir a estrutura If.. else 
+- [x] Possuir a estrutura de controle while/do while 
+- [x] Operações Aritméticas executadas corretamente 
+- [x] Atribuições realizadas corretamente
+- [x] Possuir operações de Entrada e Saída
+- [x] Aceitar números decimais
+- [x] Verificar se a variável já foi previamente declarada
+- [x] Verificar se a variável foi declarada e não foi usada
+- [x] Verificar se uma variável está sendo usada sem ter valor inicial
