@@ -14,7 +14,7 @@ public class MainClass {
             langParser parser;
 
             //lexer = new langLexer(CharStreams.fromFileName("src\\Resources\\teste2.isi"));
-            lexer = new langLexer(CharStreams.fromFileName("src/Resources/teste1.isi"));
+            lexer = new langLexer(CharStreams.fromFileName("src/Resources/teste3.isi"));
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
 
             parser = new langParser(tokenStream);
@@ -23,7 +23,7 @@ public class MainClass {
 
             parser.exibeComandos();
             parser.generateCode();
-            /*parser.Warnings();*/
+            parser.Warnings();
 
         } catch (IsiSemanticException ex) {
             System.err.println("Erro semântico- " + ex.getMessage());
