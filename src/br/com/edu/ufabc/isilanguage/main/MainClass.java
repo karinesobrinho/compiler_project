@@ -24,6 +24,7 @@ public class MainClass {
             System.err.println("Semantic error - " + ex.getMessage());
         } catch (Exception ex) {
             System.err.println("ERROR - " + ex.getMessage());
+            System.out.println("SAMI TESTES");
         }
     }
 }
