@@ -3,7 +3,7 @@ package br.com.edu.ufabc.isilanguage.main;
 import br.com.edu.ufabc.isilanguage.parser.langLexer;
 import br.com.edu.ufabc.isilanguage.parser.langParser;
 
-
+import org.antlr.v4.runtime.*;
 public class MainClass {
     public static void main(String[] args){
         try{

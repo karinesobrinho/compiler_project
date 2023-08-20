@@ -18,6 +18,36 @@ public interface langListener extends ParseTreeListener {
 	 */
 	void exitProg(langParser.ProgContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link langParser#decl}.
+	 * @param ctx the parse tree
+	 */
+	void enterDecl(langParser.DeclContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link langParser#decl}.
+	 * @param ctx the parse tree
+	 */
+	void exitDecl(langParser.DeclContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link langParser#declaravar}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclaravar(langParser.DeclaravarContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link langParser#declaravar}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclaravar(langParser.DeclaravarContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link langParser#tipo}.
+	 * @param ctx the parse tree
+	 */
+	void enterTipo(langParser.TipoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link langParser#tipo}.
+	 * @param ctx the parse tree
+	 */
+	void exitTipo(langParser.TipoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link langParser#bloco}.
 	 * @param ctx the parse tree
 	 */
@@ -68,6 +98,26 @@ public interface langListener extends ParseTreeListener {
 	 */
 	void exitCmdattrib(langParser.CmdattribContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link langParser#cmdenquanto}.
+	 * @param ctx the parse tree
+	 */
+	void enterCmdenquanto(langParser.CmdenquantoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link langParser#cmdenquanto}.
+	 * @param ctx the parse tree
+	 */
+	void exitCmdenquanto(langParser.CmdenquantoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link langParser#cmdselecao}.
+	 * @param ctx the parse tree
+	 */
+	void enterCmdselecao(langParser.CmdselecaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link langParser#cmdselecao}.
+	 * @param ctx the parse tree
+	 */
+	void exitCmdselecao(langParser.CmdselecaoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link langParser#expr}.
 	 * @param ctx the parse tree
 	 */
@@ -87,4 +137,6 @@ public interface langListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTermo(langParser.TermoContext ctx);
+
+	
 }

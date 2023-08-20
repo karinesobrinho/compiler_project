@@ -9,6 +9,11 @@ import org.antlr.v4.runtime.tree.*;
 import br.com.edu.ufabc.isilanguage.datastructure.IsiVariable;
 import br.com.edu.ufabc.isilanguage.ast.AbstractCommand;
 import br.com.edu.ufabc.isilanguage.ast.IsiProgram;
+import br.com.edu.ufabc.isilanguage.ast.CommandLeitura;
+import br.com.edu.ufabc.isilanguage.ast.CommandEscrita;
+import br.com.edu.ufabc.isilanguage.ast.CommandAtribuicao;
+import br.com.edu.ufabc.isilanguage.ast.CommandDecisao;
+import br.com.edu.ufabc.isilanguage.ast.CommandRepeticao;
 import br.com.edu.ufabc.isilanguage.datastructure.IsiSymbol;
 import br.com.edu.ufabc.isilanguage.datastructure.IsiSymbolTable;
 import br.com.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
@@ -190,11 +195,11 @@ public class langParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_decl; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof langListener ) ((langListener)listener).enterBloco(this);
+			if ( listener instanceof langListener ) ((langListener)listener).enterDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof langListener ) ((langListener)listener).exitBloco(this);
+			if ( listener instanceof langListener ) ((langListener)listener).exitDecl(this);
 		}
 	}
 
@@ -372,7 +377,7 @@ public class langParser extends Parser {
 
 	public static class BlocoContext extends ParserRuleContext {
 		public List<CmdContext> cmd() {
-			return getRuleContext(CmdContext.class);
+			return getRuleContexts(CmdContext.class);
 		}
 		public CmdContext cmd(int i) {
 			return getRuleContext(CmdContext.class,i);
@@ -412,7 +417,7 @@ public class langParser extends Parser {
 				setState(60); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) || (1L<< T__7) | (1L << ID))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) | (1L << T__7) | (1L << ID))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -487,14 +492,14 @@ public class langParser extends Parser {
 				case T__6:
 					enterOuterAlt(_localctx, 4);
 					{
-					setState(65);
-					cmdenquanto();
+					setState(66);
+					enquanto();
 					}
 					break;
 				case T__7:
 					enterOuterAlt(_localctx, 5);
 					{
-					setState(66);
+					setState(65);
 					cmdselecao();
 					}
 					break;
@@ -551,7 +556,7 @@ public class langParser extends Parser {
 			                      _exprContent = _input.LT(-1).getText();
 			                      _exprDecision = _input.LT(-1).getText();
 			                      _exprRepetition = _input.LT(-1).getText();
-			                      curThread.add(new ReadCommand(_readID));
+			                      curThread.add(new CommandLeitura(_readID, null));
 			setState(73);
 			match(FP);
 			setState(74);
@@ -610,7 +615,7 @@ public class langParser extends Parser {
 			                      _exprContent = _input.LT(-1).getText();
 			                      _exprDecision = _input.LT(-1).getText();
 			                      _exprRepetition = _input.LT(-1).getText();
-			                      curThread.add(new WriteCommand(_writeID)
+			                      curThread.add(new CommandEscrita(_writeID));
 			setState(81);
 			match(FP);
 			setState(82);
