@@ -2,8 +2,15 @@
 package br.com.edu.ufabc.isilanguage.parser;
 
 import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
+
+import br.com.edu.ufabc.isilanguage.parser.langParser.CmdenquantoContext;
+import br.com.edu.ufabc.isilanguage.parser.langParser.CmdselecaoContext;
+import br.com.edu.ufabc.isilanguage.parser.langParser.DeclContext;
+import br.com.edu.ufabc.isilanguage.parser.langParser.DeclaravarContext;
+import br.com.edu.ufabc.isilanguage.parser.langParser.TipoContext;
 
 /**
  * This class provides an empty implementation of {@link langListener},
@@ -132,4 +139,54 @@ public class langBaseListener implements langListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void visitErrorNode(ErrorNode node) { }
+	@Override
+	public void enterDecl(DeclContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void exitDecl(DeclContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void enterDeclaravar(DeclaravarContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void exitDeclaravar(DeclaravarContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void enterTipo(TipoContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void exitTipo(TipoContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void enterCmdenquanto(CmdenquantoContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void exitCmdenquanto(CmdenquantoContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void enterCmdselecao(CmdselecaoContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void exitCmdselecao(CmdselecaoContext ctx) {
+		// TODO Auto-generated method stub
+		
+	}
 }

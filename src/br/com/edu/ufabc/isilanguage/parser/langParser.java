@@ -108,6 +108,8 @@ public class langParser extends Parser {
 		private String _exprContent;
 		private String _exprDecision;
 		private String _exprRepetition;
+		private ArrayList<AbstractCommand> listaTrue;
+		private ArrayList<AbstractCommand> listaFalse;
 	
 	public void verificaID(String id){
 		if (!symbolTable.exists(id)){
@@ -669,7 +671,7 @@ public class langParser extends Parser {
 			                      _exprContent = _input.LT(-1).getText();
 			                      _exprDecision = _input.LT(-1).getText();
 			                      _exprRepetition = _input.LT(-1).getText();
-			                      curThread.add(new AtribCommand(_exprID, _exprContent));
+			                      curThread.add(new CommandAtribuicao(_exprID, _exprContent));
 			setState(87);
 			match(ATTR);
 			_exprContent = "";
@@ -775,7 +777,7 @@ public class langParser extends Parser {
 				setState(107);
 				_errHandler.sync(this);
 				_la = _input.LA(1);	
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) || (1L<< T__7) | (1L << ID))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << T__5) | (1L << T__6) | (1L<< T__7) | (1L << ID))) != 0) );
 			setState(109);
 			match(FCH);
 			listaTrue = stack.pop();

@@ -2,6 +2,7 @@ package br.com.edu.ufabc.isilanguage.main;
 
 import br.com.edu.ufabc.isilanguage.parser.langLexer;
 import br.com.edu.ufabc.isilanguage.parser.langParser;
+import br.com.edu.ufabc.isilanguage.exceptions.IsiSemanticException;
 
 import org.antlr.v4.runtime.*;
 public class MainClass {
@@ -22,10 +23,6 @@ public class MainClass {
         } catch (IsiSemanticException ex) {
             System.err.println("Semantic error - " + ex.getMessage());
         } catch (Exception ex) {
-            System.err.println("ERROR - " + ex.getMessage());
-        }
-        catch (Exception ex) {
-            ex.printStackTrace();
             System.err.println("ERROR - " + ex.getMessage());
         }
     }
