@@ -14,7 +14,8 @@ public class MainClass {
             langParser parser;
 
             //lexer = new langLexer(CharStreams.fromFileName("src\\Resources\\teste2.isi"));
-            lexer = new langLexer(CharStreams.fromFileName("C:\\Users\\samir\\OneDrive\\Documents\\GitHub\\compiler_project\\src\\Resources\\teste1.isi"));
+            lexer = new langLexer(CharStreams.fromFileName("src\\Resources\\teste0_sami.isi"));
+            //src\Resources\teste0_sami.isi
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
 
             parser = new langParser(tokenStream);
