@@ -4,8 +4,11 @@ public class MainClass{
        Scanner _key = new Scanner(System.in);
 double a;
 double b;
-a = 5;
-b = 1;
-while (a>b) {
-System.out.println(a);a = a-1;}
+double c;
+a = 1;
+b = 2;
+if (a>b) {
+System.out.println(a);}else {
+System.out.println(b);}
+
   }}

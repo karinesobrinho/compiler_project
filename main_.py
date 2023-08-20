@@ -4,10 +4,14 @@ def main(args):
 
 	b
 
-	a = 5
-	b = 1
-	while (a>b) :
-	System.out.println(a);	a = a-1;
+	c
+
+	a = 1
+	b = 2
+	if (a>b) :
+	print(a)
+else :
+	print(b)
 
 
 if __name__ == '__main__':
