@@ -7,8 +7,12 @@ double b;
 double c;
 a = 1;
 b = 2;
-if (a>b) {
+c = 4;
+if (c==3) {
+if (c==3) {
 System.out.println(a);}else {
+System.out.println(c);}
+}else {
 System.out.println(b);}
 
   }}

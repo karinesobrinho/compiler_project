@@ -12,9 +12,14 @@ public class CommandLeitura extends AbstractCommand {
 		this.var = var;
 	}
 	@Override
-	public String generatePythonCode() {
+	public String generatePythonCode(int tabs) {
 
-		return id +" = " + (var.getType()==IsiVariable.NUMBER? "float(input())\n": "input()\n");
+		StringBuilder identacao = new StringBuilder();
+		for (int i = 0; i < tabs; i++){
+			identacao.append("\t");
+		}
+		String identacaoStr = identacao.toString();
+		return identacaoStr + id +" = " + (var.getType()==IsiVariable.NUMBER? "float(input())": "input()");
 	}
 	@Override
 	public String generateJavaCode() {

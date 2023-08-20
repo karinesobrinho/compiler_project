@@ -46,7 +46,8 @@ public class IsiVariable extends IsiSymbol{
     }
 
     public String generatePythonCode(){
-        return super.name+"\n";
+        //return super.name+"\n";
+        return "";
     }
 
 }

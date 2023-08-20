@@ -34,18 +34,24 @@ public class CommandDecisao extends AbstractCommand {
 	}
 
 	@Override
-	public String generatePythonCode() {
+	public String generatePythonCode(int tabs) {
+
+		StringBuilder identacao = new StringBuilder();
+		for (int i = 0; i < tabs; i++){
+			identacao.append("\t");
+		}
+		String identacaoStr = identacao.toString();
 
 		StringBuilder str = new StringBuilder();
-		str.append("if ("+condition+") :\n");
+		str.append(identacaoStr+"if ("+condition+") :\n");
 		for (AbstractCommand cmd: listaTrue) {
-			str.append("\t"+cmd.generatePythonCode());
+			str.append(cmd.generatePythonCode(tabs+1));
 		}
 		str.append("\n");
 		if (listaFalse.size() > 0) {
-			str.append("else :\n");
+			str.append(identacaoStr+"else :\n");
 			for (AbstractCommand cmd: listaFalse) {
-				str.append("\t"+cmd.generatePythonCode());
+				str.append(cmd.generatePythonCode(tabs+1));
 			}
 			str.append("\n");
 		

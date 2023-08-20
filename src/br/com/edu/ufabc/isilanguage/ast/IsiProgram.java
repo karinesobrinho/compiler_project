@@ -39,7 +39,7 @@ public class IsiProgram {
 		str.append("}");
 		
 		try {
-			FileWriter fr = new FileWriter(new File("MainClass.java"));
+			FileWriter fr = new FileWriter(new File("Output/MainClass.java"));
 			fr.write(str.toString());
 			fr.close();
 		}
@@ -58,8 +58,9 @@ public class IsiProgram {
 			str.append("\t"+symbol.generatePythonCode()+"\n");
                         varSemAtrib.add(symbol.getName());
 		}
+		int tabs = 1;
 		for (AbstractCommand command: comandos) {
-			str.append("\t"+command.generatePythonCode()+"\n");
+			str.append(command.generatePythonCode(tabs)+"\n");
                         
                         if(command.getCommand().equals("CommandAtribuicao"))
                         {
@@ -75,7 +76,7 @@ public class IsiProgram {
 		str.append("\t"+"main(sys.argv)\n");
 		
 		try {
-			FileWriter fr = new FileWriter(new File("main_.py"));
+			FileWriter fr = new FileWriter(new File("Output/main_.py"));
 			fr.write(str.toString());
 			fr.close();
 		}

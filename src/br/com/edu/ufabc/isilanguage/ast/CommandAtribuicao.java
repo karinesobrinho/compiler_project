@@ -20,8 +20,13 @@ public class CommandAtribuicao extends AbstractCommand{
 		return id + " = "+expr+";";
 	}
 	@Override
-	public String generatePythonCode() {
-		return id + " = "+expr;
+	public String generatePythonCode(int tabs) {
+		StringBuilder identacao = new StringBuilder();;
+		for (int i = 0; i < tabs; i++){
+			identacao.append("\t");
+		}
+		String identacaoStr = identacao.toString();
+		return identacaoStr + id + " = "+expr;
 	}
 	@Override
 	public String toString() {

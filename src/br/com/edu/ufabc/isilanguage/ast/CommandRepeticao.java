@@ -25,12 +25,17 @@ public class CommandRepeticao extends AbstractCommand {
 		return str.toString();
 	}
 	@Override
-	public String generatePythonCode() {
+	public String generatePythonCode(int tabs) {
+		StringBuilder identacao = new StringBuilder();
+		for (int i = 0; i < tabs; i++){
+			identacao.append("\t");
+		}
+		String identacaoStr = identacao.toString();
 
 		StringBuilder str = new StringBuilder();
-		str.append("while ("+repetition+") :\n");
+		str.append(identacaoStr+"while ("+repetition+") :\n");
 		for (AbstractCommand cmd: listaTrue) {
-			str.append("\t"+cmd.generateJavaCode());
+			str.append(identacaoStr+"\t"+cmd.generatePythonCode(tabs));
 		}
 		str.append("\n");
 	

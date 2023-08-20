@@ -13,9 +13,14 @@ public class CommandEscrita extends AbstractCommand {
 		return "System.out.println("+id+");";
 	}
 	@Override
-	public String generatePythonCode() {
-
-		return "print("+id+")";
+	public String generatePythonCode(int tabs) {
+		
+		StringBuilder identacao = new StringBuilder();
+		for (int i = 0; i < tabs; i++){
+			identacao.append("\t");
+		}
+		String identacaoStr = identacao.toString();
+		return identacaoStr+"print("+id+")";
 	}
 	@Override
 	public String toString() {
