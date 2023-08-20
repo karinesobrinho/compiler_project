@@ -125,6 +125,7 @@ public class langParser extends Parser {
 
 	public void generateCode(){
 		program.generateTarget();
+		//program.generatePythonTarget();
 	}
 
 	public void verificaTipo(String id, int tipo){

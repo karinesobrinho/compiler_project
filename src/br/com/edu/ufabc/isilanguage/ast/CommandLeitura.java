@@ -14,7 +14,7 @@ public class CommandLeitura extends AbstractCommand {
 	@Override
 	public String generatePythonCode() {
 
-		return id +"= " + (var.getType()==IsiVariable.NUMBER? "float(input())\n": "input()\n");
+		return id +" = " + (var.getType()==IsiVariable.NUMBER? "float(input())\n": "input()\n");
 	}
 	@Override
 	public String generateJavaCode() {

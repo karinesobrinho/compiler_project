@@ -49,6 +49,43 @@ public class IsiProgram {
 
 	}
 
+
+	public void generatePythonTarget() {
+		StringBuilder str = new StringBuilder();
+		str.append("import sys\n");
+		str.append("def main(args):\n");
+		for (IsiSymbol symbol: varTable.getAll()) {
+			str.append("\t"+symbol.generatePythonCode()+"\n");
+                        varSemAtrib.add(symbol.getName());
+		}
+		for (AbstractCommand command: comandos) {
+			str.append("\t"+command.generatePythonCode()+"\n");
+                        
+                        if(command.getCommand().equals("CommandAtribuicao"))
+                        {
+                            if(varSemAtrib.contains(command.getId()))
+                            {
+                                varSemAtrib.remove(command.getId());
+                            }
+                        }
+		}
+                
+		str.append("\n");
+		str.append("if __name__ == '__main__':\n");
+		str.append("\t"+"main(sys.argv)\n");
+		
+		try {
+			FileWriter fr = new FileWriter(new File("main_.py"));
+			fr.write(str.toString());
+			fr.close();
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+
 	public IsiSymbolTable getVarTable() {
 		return varTable;
 	}

@@ -21,7 +21,7 @@ public class CommandAtribuicao extends AbstractCommand{
 	}
 	@Override
 	public String generatePythonCode() {
-		return id + " = "+expr + "\n";
+		return id + " = "+expr;
 	}
 	@Override
 	public String toString() {
