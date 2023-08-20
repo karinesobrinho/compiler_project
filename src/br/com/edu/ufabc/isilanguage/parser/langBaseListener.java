@@ -4,6 +4,7 @@ package br.com.edu.ufabc.isilanguage.parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
+import org.antlr.v4.runtime.ParserRuleContext;
 
 /**
  * This class provides an empty implementation of {@link langListener},
