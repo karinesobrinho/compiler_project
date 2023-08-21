@@ -1,5 +1,7 @@
-## Link do Vídeo
+## Projeto de Compiladores
 
+## Link do Vídeo
+https://youtu.be/RfdYl2Ktlik
 
 ## Grupo
 <table> 
@@ -41,5 +43,4 @@
 - [x] Aceitar números decimais
 - [x] Verificar se a variável já foi previamente declarada
 - [x] Verificar se a variável foi declarada e não foi usada
-- [x] Verificar se uma variável está sendo usada sem ter valor inicial
-- [x] Geração de várias linguagens-alvo + explicação da saída em java
+- [x] Geração de várias linguagens-alvo + explicação da saída em java - (adicional)
