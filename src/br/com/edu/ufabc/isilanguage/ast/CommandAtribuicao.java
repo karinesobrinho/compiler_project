@@ -26,7 +26,7 @@ public class CommandAtribuicao extends AbstractCommand{
 			identacao.append("\t");
 		}
 		String identacaoStr = identacao.toString();
-		return identacaoStr + id + " = "+expr;
+		return identacaoStr + id + " = "+expr+"\n";
 	}
 	@Override
 	public String toString() {

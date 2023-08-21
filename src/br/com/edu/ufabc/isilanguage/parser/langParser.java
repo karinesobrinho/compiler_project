@@ -155,7 +155,7 @@ public class langParser extends Parser {
 	}
 
 	public void generateCode(){
-		program.generateTarget();
+		program.generateJavaTarget();
 		program.generatePythonTarget();
 	}
 

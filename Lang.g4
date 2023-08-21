@@ -23,7 +23,7 @@ grammar Lang;
 	private String _exprContent;
 	private String _expreDecision;
 	private String _expreRepetition;
-	privavte ArrayList<String> variavelSemUso;
+	private ArrayList<String> variavelSemUso;
 	private ArrayList<AbstractCommand> listTrue;
 	private ArrayList<AbstractCommand> listFalse; 
 

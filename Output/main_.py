@@ -2,8 +2,13 @@ import sys
 def main(args):
 	
 	
-	a = 10
+	a = 1
+
+	b = "Teste"
+
 	print(a)
+
+	print(b)
 
 
 if __name__ == '__main__':

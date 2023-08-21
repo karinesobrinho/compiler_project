@@ -13,7 +13,7 @@ public class IsiProgram {
         private ArrayList<String> varSemAtrib = new ArrayList<String>();
 	private String programName;
 
-	public void generateTarget() {
+	public void generateJavaTarget() {
 		StringBuilder str = new StringBuilder();
 		str.append("import java.util.Scanner;\n");
 		str.append("public class MainClass{ \n");
