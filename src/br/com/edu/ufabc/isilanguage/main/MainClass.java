@@ -13,7 +13,7 @@ public class MainClass {
 			langLexer lexer;
 			langParser parser;
 
-			lexer = new langLexer(CharStreams.fromFileName("src/Resources/teste2-sami.isi"));
+			lexer = new langLexer(CharStreams.fromFileName("src/Resources/testeH.isi"));
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
 			
 			parser = new langParser(tokenStream);			

@@ -137,24 +137,20 @@ public class langParser extends Parser {
 
 			varWarning.append("Variables declared but not used: ");
 			ArrayList<String> var = program.getVarSemUso();
-
+			
 			if(var.isEmpty())return null;
 
 			int size = var.size();
-			if(size ==1)varWarning.append(var.get(0));
-
-			else if(size>1)
-			{
-				 int i=0;
-				 for(;i<=size-2;i++)
-				 {
-					 String w = var.get(i);
-					 varWarning.append(w);
-					 varWarning.append(",");
-				 }
-				 varWarning.append(var.get(size-1));
+			
+			if(size > 1){
+				for(int i = 0;i<=(size/2)-2;i++){
+					String w = var.get(i);
+					varWarning.append(w);
+					varWarning.append(",");
+				}
+				varWarning.append(var.get((size/2)-1));
 			}
-
+			
 		return varWarning;
 	}
 

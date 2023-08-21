@@ -44,7 +44,7 @@ public void exibeComandos(){
 public StringBuilder exibeVariavelSemUso(){
 	StringBuilder varWarning = program.getVarSemUso();
 	ArrayList<String> var = program.getVarSemUso();
-
+	varWarning.append("Variables declared but not used: ");
 	if(var.isEmpty()) return null;
 
 	int size = var.size();

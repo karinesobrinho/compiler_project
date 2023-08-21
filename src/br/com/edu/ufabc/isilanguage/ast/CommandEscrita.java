@@ -20,7 +20,7 @@ public class CommandEscrita extends AbstractCommand {
 			identacao.append("\t");
 		}
 		String identacaoStr = identacao.toString();
-		return identacaoStr+"print("+id+")";
+		return identacaoStr+"print("+id+")\n";
 	}
 	@Override
 	public String toString() {

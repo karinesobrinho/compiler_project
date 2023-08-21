@@ -1,0 +1,17 @@
+programa
+
+  numero a.
+  numero b, c, d.
+  
+  a := 2.06 + 0.1.
+  b := 5 - 4.
+  c := 20*0.1.
+  d := 5/4.
+  
+  escreva (a). 
+  escreva (b).
+  escreva (c).
+  escreva (d).
+  
+  
+fimprog.

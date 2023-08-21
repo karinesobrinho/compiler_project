@@ -1,11 +1,15 @@
 programa
 
   numero a.
-  
-  a := 2.06.
+  texto  b.
+
+  leia (a).
+  leia (b).
   
   escreva (a).
   escreva (b).
   
+
   
 fimprog.
+
