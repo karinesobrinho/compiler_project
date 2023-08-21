@@ -1,28 +1,32 @@
-## Projeto de criação do Compilador
+## Link do Vídeo
 
-## Link Youtube
-// pendente
 
 ## Grupo
 <table> 
 	<thead>
 	<th>Nome</th>
+	<th>RA</th>
 	</thead>
 	<tbody>
 	<tr>
-		<td>Karine Sobrinho</td>
+		<td>Karine da Silva Sobrinho</td>
+		<td>11201812367</td>
 	</tr>
 	<tr>
-		<td>Karol Medeiros</td>
+		<td>Karoline Novaes Medeiros</td>
+		<td>11201932565</td>
 	</tr>
 	<tr>
-		<td>Júlia Oliveira</td>
+		<td>Júlia Oliveira Costa</td>
+		<td>11201810014</td>
 	</tr>
 	<tr>
 		<td>Samira Haddad</td>
+		<td>11201812350</td>
 	</tr>
     <tr>
-        <td>Vinicius Viana</td>
+        <td>Vinicius R. R. Viana</td>
+		<td>11201811515</td>
 	</tr>
 	</tbody>
 </table>
@@ -38,3 +42,4 @@
 - [x] Verificar se a variável já foi previamente declarada
 - [x] Verificar se a variável foi declarada e não foi usada
 - [x] Verificar se uma variável está sendo usada sem ter valor inicial
+- [x] Geração de várias linguagens-alvo + explicação da saída em java
