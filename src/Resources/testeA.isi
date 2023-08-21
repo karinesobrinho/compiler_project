@@ -1,0 +1,14 @@
+programa
+
+  numero a.
+  texto  b.
+
+  a := 1.
+  b := "Teste".
+  
+  escreva (a).
+  escreva (b).
+  
+
+  
+fimprog.

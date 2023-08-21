@@ -1,0 +1,15 @@
+programa
+  numero a1, a2, a3.
+  a1 := 1.
+  a2 := 2.
+  a3 := 4.
+  
+  se ( a1 > a2 ) {
+     escreva (a1)
+  }
+  senao {
+     escreva (a3).
+  }
+
+  
+fimprog.
